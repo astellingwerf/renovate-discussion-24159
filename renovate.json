@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/).gitlab-ci.yml$"],
+      "matchStrings": ["TEMURIN\\d+_JDK_VERSION:\\s+\"(?<currentValue>.*)\""],
+      "depNameTemplate": "java-jdk",
+      "versioningTemplate": "loose",
+      "datasourceTemplate": "java-version"
+    }
+  ]
+}
