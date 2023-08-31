@@ -16,7 +16,7 @@
     "jdk": {
       "defaultRegistryUrlTemplate": "https://api.adoptium.net/v3/info/release_versions?project=jdk&release_type=ga&sort_method=DATE&sort_order=DESC&show_page_count=true&page_size=100",
       "transformTemplates": [
-        "{\"releases\": $map($.versions, function($v, $i, $a) {{ \"version\": $v.openjdk_version}})}"
+        "{ \"releases\": $map($.versions, function($v, $i, $a) { { \"version\": $v.openjdk_version} } ) }"
       ]
     }
   }
